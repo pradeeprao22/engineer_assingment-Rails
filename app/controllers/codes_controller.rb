@@ -1,9 +1,7 @@
 class CodesController < ApplicationController
-
   helper_method :generate_uuid
   before_action :set_code, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
-
 
   def generate_uuid
     p SecureRandom.hex(5)
@@ -38,11 +36,11 @@ class CodesController < ApplicationController
   end
 
   private
-  def set_code
+    def set_code
       @code = Code.find(params[:id])
-  end
+    end
 
-  def code_params
-      params.require(:code).permit(:secretcode, :uuid)
-  end
+    def code_params
+      params.require(:code).permit(:secretcode)
+    end
 end
