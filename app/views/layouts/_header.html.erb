@@ -1,0 +1,14 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <%= link_to "Admin", root_path, id: "logo" %>
+    <nav>
+
+     <ul class="nav navbar-nav navbar-right">
+     <% if current_user && current_user.admin %>
+        <li><%= link_to "Codes", codes_path %></li>
+        <% end %>
+      </ul>
+
+    </nav>
+  </div>
+</header>
