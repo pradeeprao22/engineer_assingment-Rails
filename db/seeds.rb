@@ -4,4 +4,6 @@
 # Examples:
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   User.create(first: 'Luke', last: movies.first)
+User.create(first: 'admin', last: 'admin', seceret_code: '12345' email: 'admin@test.com', password: '123456', confirm_password: '123456')
+
+# by default admin = True
