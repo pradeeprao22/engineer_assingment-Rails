@@ -41,6 +41,6 @@ class CodesController < ApplicationController
     end
 
     def code_params
-      params.require(:code).permit(:secretcode)
+      params.require(:code).permit(:secretcode, :uuid)
     end
 end
